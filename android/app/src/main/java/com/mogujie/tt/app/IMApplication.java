@@ -9,7 +9,7 @@ import com.mogujie.tt.utils.Logger;
 
 public class IMApplication extends Application {
 
-	private Logger logger = Logger.getLogger(IMApplication.class);
+	private Logger logger = Logger.getLogger(IMApplication.class); //程序启动会先初始化Logger
 
 	/**
 	 * @param args
@@ -28,7 +28,7 @@ public class IMApplication extends Application {
 	private void startIMService() {
 		logger.i("start IMService");
 		Intent intent = new Intent();
-		intent.setClass(this, IMService.class);
+		intent.setClass(this, IMService.class); //启动IMService服务
 		startService(intent);
 	}
 
